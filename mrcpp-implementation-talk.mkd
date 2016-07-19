@@ -3,34 +3,106 @@ layout: true
 class: center, middle, inverse
 ---
 #MRCPP
-##Data structures and algorithms
+##Implementation
 
 .author[Stig Rune Jensen]
+
 .date[3 August 2016, Stony Brook, NY]
+
 .footnote[Slides available on [GitHub](https://github.com/stigrj/mrcpp-implementation-talk)]
 
 ---
+
+layout: false
+.left-column[
+## Technical stuff
+]
+.right-column[
+- Hosted on GitHub
+- Documentation on ReadTheDocs
+- Configuration with (Auto)cmake
+- Testing with Catch
+- Number crunching with BLAS
+- Parallelization with OpenMP
+]
+
+---
 template: inverse
-## Data structures
+# Data structures
 ---
 
 layout: false
 .left-column[
 ## Data structures
+### - Node
+### - Tree
+### - Convolution operators
 ]
 .right-column[
+- cvTransform
+- mwTransform
+- Allocator
+- Redundant representation
+- GenNodes
+- Construction CCC etc
+- Decomposition
+  * Gaussian expansion
+  * Length scales
+  * Wavelets: A, B, C and T 
+- Linear scaling
+  * Vanishing moments
+  * Bandwidths
 ]
 
 ---
 template: inverse
-## Algorithms
+# Algorithms
 ---
 
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
+### - Thresholding
 ]
 .right-column[
+- Tree building algorithm
+- Function thresholding
+- MW transforms
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Projection
+### - Addition
+### - Multiplication
+### - Operator application
+]
+.right-column[
+- Interpolating property
+- cvTransform
+- mwTransform
+- NS form
+- Bandwidths
+- Pointer array
+- Operator thresholding
+- GenNodes
+]
+
+---
+template: inverse
+# Parallelization
+---
+
+layout: false
+.left-column[
+## Parallelization
+]
+.right-column[
+- Tree building algorithm
 ]
 
 ---
