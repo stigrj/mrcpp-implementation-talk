@@ -2,7 +2,8 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-#MRCPP: Data structures and Algorithms
+#MRCPP
+##Data structures and algorithms
 
 .author[Stig Rune Jensen]
 
@@ -12,6 +13,7 @@ class: center, middle, inverse
 
 ---
 
+template: inverse
 layout: true
 ## Data structures
 ]
@@ -27,12 +29,9 @@ layout: false
 
 ---
 
+template: inverse
 layout: true
-.left-column[
 ## Algorithms
-]
-.right-column[
-]
 
 ---
 
