@@ -6,12 +6,11 @@ class: center, middle, inverse
 ##Data structures and algorithms
 
 .author[Stig Rune Jensen]
-
 .date[3 August 2016, Stony Brook, NY]
-
 .footnote[Slides available on [GitHub](https://github.com/stigrj/mrcpp-implementation-talk)]
 
 ---
+template: inverse
 ## Data structures
 ---
 
@@ -23,6 +22,7 @@ layout: false
 ]
 
 ---
+template: inverse
 ## Algorithms
 ---
 
