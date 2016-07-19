@@ -12,12 +12,7 @@ class: center, middle, inverse
 .footnote[Slides available on [GitHub](https://github.com/stigrj/mrcpp-implementation-talk)]
 
 ---
-
-template: inverse
-layout: true
 ## Data structures
-]
-
 ---
 
 layout: false
@@ -28,11 +23,7 @@ layout: false
 ]
 
 ---
-
-template: inverse
-layout: true
 ## Algorithms
-
 ---
 
 layout: false
