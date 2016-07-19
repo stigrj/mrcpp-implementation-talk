@@ -1,0 +1,65 @@
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+#MRCPP: Data structures and Algorithms
+
+.author[Stig Rune Jensen]
+
+.date[3 August 2016, Stony Brook, NY]
+
+.footnote[Slides available on [GitHub](https://github.com/stigrj/mrcpp-implementation-talk)]
+
+---
+
+layout: true
+## Data structures
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+]
+.right-column[
+]
+
+---
+
+layout: true
+.left-column[
+## Algorithms
+]
+.right-column[
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+]
+.right-column[
+]
+
+---
+
+## Acknowldegements
+
+- Luca Frediani
+
+- Tor Flå
+
+- Radovan Bast
+
+- Jonas Juselius
+
+---
+name: last-page
+template: inverse
+
+Slideshow created using [remark] and served using [cicero]
+
+[remark]: https://github.com/gnab/remark
+[cicero]: https://github.com/bast/cicero
