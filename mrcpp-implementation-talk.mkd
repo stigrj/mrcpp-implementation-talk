@@ -104,6 +104,20 @@ class MWNode {
 ### - MWNode
 ]
 .right-column[
+#### Adaptividy
+
+Adaptivity cartoon
+
+]
+
+---
+
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+]
+.right-column[
 #### Representations
 
 - MRA allows for fine-scale representation
@@ -238,6 +252,123 @@ layout: false
     \int P(\boldsymbol{x},\boldsymbol{y})\rho(\boldsymbol{y}) d\boldsymbol{y}
    $$`
 
+- Poisson kernel
+
+  `$$
+    P(\boldsymbol{x}-\boldsymbol{y}) = \frac{1}{4\pi\|\boldsymbol{x}-\boldsymbol{y}\|}
+   $$`
+
+- Numerical problems
+  * Non-separable
+  * Singularity at short range
+  * Slow decay at long range
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x}-\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x}-\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=0}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+   $$`
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x}-\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x}-\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=0}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+   $$`
+
+Poisson kernel cartoon
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x}-\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x}-\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=0}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+   $$`
+
+- Solves numerical problems
+  * Separates coordinates
+  * Remove singularity
+  * Separates length scales
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- MW representation
+- Projection of kernel
+- MW decomposition
+
+  `$$
+    T^{n+1} = T^n + C^n + B^n + A^n
+   $$`
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+  `$$
+    T^{n+1} = T^n + C^n + B^n + A^n
+   $$`
+- Vanishing moments cartoon
+
 ]
 
 
@@ -251,22 +382,11 @@ layout: false
 ### - MWOperator
 ]
 .right-column[
-#### Convolution operators
-
-]
-
-
----
-
-layout: false
-.left-column[
-## Data structures
-### - MWNode
-### - MWTree
-### - MWOperator
-]
-.right-column[
-#### Convolution operators
+#### Poisson operator
+  `$$
+    T^{n+1} = T^n + C^n + B^n + A^n
+   $$`
+- NS form cartoon
 
 ]
 
@@ -283,7 +403,6 @@ layout: false
 #### Convolution operators
 
 - MW operators are 2D trees
-- Construction CCC etc
 - Decomposition
   * Gaussian expansion
   * Length scales
