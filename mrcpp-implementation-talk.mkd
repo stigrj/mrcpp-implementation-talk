@@ -283,12 +283,15 @@ layout: false
    $$`
 
 - Expansion obtained from the relation
+
   `$$ \frac{1}{r} = \frac{4}{\pi} \int_0^\infty e^{-4r^2t^2} dt $$`
 
 - Substitution: `\(t = log(1+e^u)-u\)`
+  
   `$$ \frac{1}{r} = \frac{4}{\pi} \int_{-\infty}^{\infty} f_1(u) du $$`
 
 - Substitution: `\(u = -sinh(w)\)`
+  
   `$$ \frac{1}{r} = \frac{4}{\pi} \int_{-\infty}^{\infty} f_2(w) dw $$`
 
 - Super-exponential decay for `\(w \rightarrow \pm \infty\)` 
