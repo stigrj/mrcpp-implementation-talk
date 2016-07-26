@@ -319,7 +319,7 @@ layout: false
   `$$
     P(\boldsymbol{x},\boldsymbol{y}) \approx
     \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
-    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
    $$`
 
 Poisson kernel cartoon
@@ -342,7 +342,7 @@ layout: false
   `$$
     P(\boldsymbol{x},\boldsymbol{y}) \approx
     \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
-    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
    $$`
 
 - Solves numerical problems
@@ -361,7 +361,7 @@ layout: false
 ### - MWOperator
 ]
 .right-column[
-#### Poisson operator
+#### Convolution operators
 - Operator reduced to 1D convolutions with Gaussians
 
   `$$ 
@@ -395,7 +395,7 @@ layout: false
 ### - MWOperator
 ]
 .right-column[
-#### Poisson operator
+#### Convolution operators
   `$$
     T^{n+1} = T^n + C^n + B^n + A^n
    $$`
@@ -414,7 +414,7 @@ layout: false
 ### - MWOperator
 ]
 .right-column[
-#### Poisson operator
+#### Convolution operators
   `$$
     T^{n+1} = T^n + C^n + B^n + A^n
    $$`
@@ -435,12 +435,16 @@ layout: false
 #### Convolution operators
 
 - MW operators are 2D trees
-- Decomposition
+
+- Operator decompositions
   * Gaussian expansion
+  * Dimension
   * Length scales
-  * Wavelets: A, B, C and T 
+  * MW decomposition: A, B, C and T 
+
 - Linear scaling
   * Vanishing moments
+  * Thresholding
   * Bandwidths
 ]
 
