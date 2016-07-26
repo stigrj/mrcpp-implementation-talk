@@ -505,10 +505,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-4} + \sum_{n=N-4}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<div 
-    style="background-image:url('https://github.com/stigrj/mrcpp-implementation-talk/blob/master/images/matrix/matrix_1.jpg');
-    background-position:center;">
-</div>
+<img src="images/matrix/matrix_1.jpg";>
 
 ]
 
