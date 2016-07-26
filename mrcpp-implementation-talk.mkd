@@ -558,7 +558,7 @@ layout: false
   `$$
     T \approx \Bigg(T^{N+1}\Bigg)
    $$`
-<img src="images/matrix/matrix_1.jpg" style="width: 200%; float: left">
+<img src="images/matrix/mat_1.jpg" style="width: 200%; float: left">
 
 ]
 
@@ -576,7 +576,7 @@ layout: false
   `$$
     T \approx \Bigg(T^{N} + C^{N} + B^{N} + A^{N}\Bigg)
    $$`
-<img src="images/matrix/matrix_2.jpg" style="width: 200%; float: left">
+<img src="images/matrix/mat_2.jpg" style="width: 200%; float: left">
 
 ]
 
@@ -594,7 +594,7 @@ layout: false
   `$$
     T \approx \Bigg(T^{N}\Bigg) + \Bigg(C^{N} + B^{N} + A^{N}\Bigg)
    $$`
-<img src="images/matrix/matrix_3.jpg" style="width: 200%; float: left">
+<img src="images/matrix/mat_3.jpg" style="width: 200%; float: left">
 
 ]
 
@@ -614,7 +614,7 @@ layout: false
     \Bigg(T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}\Bigg) +
     \Bigg(C^{N} + B^{N} + A^{N}\Bigg)
    $$`
-<img src="images/matrix/matrix_4.jpg" style="width: 200%; float: left">
+<img src="images/matrix/mat_4.jpg" style="width: 200%; float: left">
 
 ]
 
@@ -635,7 +635,7 @@ layout: false
     \Bigg(C^{N-1} + B^{N-1} + A^{N-1}\Bigg) +
     \Bigg(C^{N} + B^{N} + A^{N}\Bigg)
    $$`
-<img src="images/matrix/matrix_5.jpg" style="width: 200%; float: left">
+<img src="images/matrix/mat_5.jpg" style="width: 200%; float: left">
 
 ]
 
@@ -655,7 +655,7 @@ layout: false
     T^{N-2} +
     \sum_{n=N-2}^N \Bigg(C^{n} + B^{n} + A^{n}\Bigg)
    $$`
-<img src="https://github.com/stigrj/mrcpp-implementation-talk/tree/master/images/matrix" style="width: 200%; float: left">
+<img src="images/matrix/mat_6.jpg" style="width: 200%; float: left">
 
 ]
 
