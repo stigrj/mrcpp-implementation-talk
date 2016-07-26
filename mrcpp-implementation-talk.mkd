@@ -104,13 +104,13 @@ class MWNode {
 ### - MWNode
 ]
 .right-column[
-Representations
+#### Representations
 
-- MRA allows for fine-scale representation in scaling functions
+- MRA allows for fine-scale representation
 
   `$$ f^N = \sum_{l=0}^{2^N-1}\sum_{j=0}^{k} s_{jl}^N \phi_{jl}^N(x) $$`
 
-- or multi-scale representation in wavelet functions
+- or multi-scale representation
 
   `$$ f^N = \sum_{j=0}^{k} s_{jl}^0 \phi_{jl}^0(x) +
   \sum_{n=0}^{N-1}\sum_{l=0}^{2^N-1}\sum_{j=0}^{k} w_{jl}^n \psi_{jl}^n(x) $$`
@@ -127,24 +127,24 @@ Representations
 ### - MWNode
 ]
 .right-column[
-Transformations
+#### Transformations
 
 - We can go from a `\(V^n \oplus W^n\)` representation
   to a `\(V^{n+1}\)` representation using the MW transform
 
 - We can go from a `\(V^{n+1}\)` representation to a function value
-  representation using the CV (coefficient-value) transform
+  representation using the CV transform (coefficient-value)
 
 ```cpp
-    MWNode<D> node;                     // V^{n} + W^{n}
+MWNode<D> node;                     // V^{n} + W^{n}
 
-    node.mwTransform(Reconstruction);   // V^{n+1}
+node.mwTransform(Reconstruction);   // V^{n+1}
     
-    node.cvTransform(Forward);          // function values
+node.cvTransform(Forward);          // Function values
     
-    node.cvTransform(Backward);         // V^{n+1}
+node.cvTransform(Backward);         // V^{n+1}
     
-    node.mwTransform(Compression);      // V^{n} + W^{n}
+node.mwTransform(Compression);      // V^{n} + W^{n}
 ```
 ]
 
@@ -156,6 +156,8 @@ Transformations
 ### - MWNode
 ]
 .right-column[
+#### Transformations
+
 - Often require nodes beyond the finest refinement level
 
 - Information available by MW transform
@@ -182,6 +184,105 @@ layout: false
 ### - MWOperator
 ]
 .right-column[
+#### Convolution operators
+- General nD integral operator
+
+  `$$ 
+    \hat{T}f(\boldsymbol{x}) = 
+    \int K(\boldsymbol{x},\boldsymbol{y})f(\boldsymbol{y}) d\boldsymbol{y}
+   $$`
+
+- Separable representation
+
+  `$$
+    K(\boldsymbol{x},\boldsymbol{y}) \approx 
+    \tilde{K}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_\kappa \prod_{p=0}^d K_p^d(x_p,y_p)
+   $$`
+
+- Find parameters such that
+
+  `$$
+    sup_y\left|\frac{K(\boldsymbol{x},\boldsymbol{y}) -
+    \tilde{K}(\boldsymbol{x},\boldsymbol{y})}
+    {K(\boldsymbol{x},\boldsymbol{y})}\right| \leq
+    \epsilon
+   $$`
+
+- Decompose into a sum of products of 1D operators
+
+- Reduce the complexity from `\(k^{2d}\)` to `\(Mdk^{d+1}\)`
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- The Poisson equation relates the electrostatic potential `\(V\)`
+  to the charge density `\(\rho\)`
+ 
+  `$$
+    \nabla^2 V(\boldsymbol{x}) = -\rho(\boldsymbol{x})
+   $$`
+
+- Direct solution in integral form
+  `$$
+    V(\boldsymbol{x}) =
+    \int P(\boldsymbol{x},\boldsymbol{y})\rho(\boldsymbol{y}) d\boldsymbol{y}
+   $$`
+
+]
+
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+
+]
+
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWNode
+### - MWTree
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+
+- MW operators are 2D trees
 - Construction CCC etc
 - Decomposition
   * Gaussian expansion
