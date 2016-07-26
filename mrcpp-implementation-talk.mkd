@@ -106,7 +106,7 @@ class MWNode {
 .right-column[
 #### Adaptividy
 
-<img src="images/adaptivity.jpg">
+<img src="images/adaptivity.jpg" style="width: 50%">
 
 ]
 
