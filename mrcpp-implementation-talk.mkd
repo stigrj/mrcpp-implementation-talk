@@ -420,7 +420,97 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-- NS form cartoon
+<img src="images/matrix_1.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+  `$$
+    T^{N+1} = T^N + C^N + B^N + A^N
+   $$`
+<img src="images/matrix_2.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+  `$$
+    T^{N+1} = T^N + C^N + B^N + A^N
+   $$`
+<img src="images/matrix_3.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+  `$$
+    T^{N+1} = T^N + C^N + B^N + A^N
+   $$`
+<img src="images/matrix_4.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+  `$$
+    T^{N+1} = T^N + C^N + B^N + A^N
+   $$`
+<img src="images/matrix_5.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+  `$$
+    T^{N+1} = T^N + C^N + B^N + A^N
+   $$`
+<img src="images/matrix_6.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
