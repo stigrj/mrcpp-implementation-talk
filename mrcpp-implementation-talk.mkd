@@ -655,7 +655,7 @@ layout: false
     T^{N-2} +
     \sum_{n=N-2}^N \Bigg(C^{n} + B^{n} + A^{n}\Bigg)
    $$`
-<img src="images/matrix/matrix_6.jpg" style="width: 200%; float: left">
+<img src="https://github.com/stigrj/mrcpp-implementation-talk/tree/master/images/matrix" style="width: 200%; float: left">
 
 ]
 
