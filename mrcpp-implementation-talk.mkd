@@ -380,7 +380,7 @@ layout: false
 - MW transform to obtain wavelet terms
 
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N} = T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}
    $$`
 
 ]
@@ -397,7 +397,7 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N} = T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}
    $$`
 
 <img src="images/vanishing_moments.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
@@ -418,9 +418,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N+1}
    $$`
-<img src="images/matrix/matrix_1.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_1.jpg" style="float: left; width: 150%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -436,9 +436,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N} + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_2.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_2.jpg" style="float: left; width: 150%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -454,9 +454,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N-1} + \sum_{n=N-1}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_3.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_3.jpg" style="float: left; width: 150%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -472,9 +472,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N-2} + \sum_{n=N-2}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_4.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_4.jpg" style="float: left; width: 150%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -490,9 +490,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{N-3} + \sum_{n=N-3}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_5.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_5.jpg" style="float: left; width: 150%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -508,9 +508,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^N + C^N + B^N + A^N
+    T^{0} + \sum_{n=0}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_6.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_6.jpg" style="float: left; width: 150%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
