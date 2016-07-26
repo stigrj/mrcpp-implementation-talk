@@ -106,7 +106,7 @@ class MWNode {
 .right-column[
 #### Adaptividy
 
-Adaptivity cartoon
+<img src="images/adaptivity.jpg">
 
 ]
 
