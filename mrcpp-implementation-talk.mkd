@@ -507,8 +507,8 @@ layout: false
    $$`
 <div 
     style="background-image: src('images/matrix/matrix_6.jpg');
-    width:200px; 
-    height:100px; 
+    width:50%; 
+    height:50%; 
     background-position:center;">&nbsp;
 </div>
 
