@@ -505,7 +505,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-4} + \sum_{n=N-4}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_1.jpg";>
+<img src="images/matrix/matrix_1.jpg" align="middle">
 
 ]
 
@@ -529,7 +529,7 @@ layout: false
   * Separated length scales
   * MW decomposition
   `$$
-    T^{N+1} = T^0 + \sum_{n=0}^N \Big(C^n + B^n + A^n\big)
+    T^{N} = T^0 + \sum_{n=0}^{N-1} \Big(C^n + B^n + A^n\big)
    $$`
 
 - Linear scaling
