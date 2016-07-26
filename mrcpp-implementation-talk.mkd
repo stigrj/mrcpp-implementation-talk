@@ -400,7 +400,7 @@ layout: false
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
 
-<img src="images/vanishing_moments.pdf" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/vanishing_moments.jpg" style="float: left; width: 45%; margin-right: 1%; margin-bottom: 0.5em;">
 
 
 ]
