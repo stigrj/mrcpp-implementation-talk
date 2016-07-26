@@ -106,7 +106,7 @@ class MWNode {
 .right-column[
 #### Adaptivity
 
-<img src="images/adaptivity.jpg" style="width: 50%">
+<img src="images/adaptivity.jpg" style="width: 80%">
 
 ]
 
@@ -420,6 +420,7 @@ layout: false
   `$$
     T^{N+1}
    $$`
+<img src="images/matrix/matrix_1.jpg" style="float: bottom; width: 50%;">
 
 ]
 
@@ -437,6 +438,7 @@ layout: false
   `$$
     T^{N+1} = T^{N} + C^{N} + B^{N} + A^{N}
    $$`
+<img src="images/matrix/matrix_2.jpg" style="float: bottom; width: 50%;">
 
 ]
 
@@ -454,6 +456,7 @@ layout: false
   `$$
     T^{N+1} = \Big(T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}\Big) + C^{N} + B^{N} + A^{N}
    $$`
+<img src="images/matrix/matrix_3.jpg" style="float: bottom; width: 50%;">
 
 ]
 
@@ -471,6 +474,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-2} + \sum_{n=N-2}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
+<img src="images/matrix/matrix_4.jpg" style="float: bottom; width: 50%;">
 
 ]
 
@@ -488,6 +492,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-3} + \sum_{n=N-3}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
+<img src="images/matrix/matrix_5.jpg" style="float: bottom; width: 50%;">
 
 ]
 
@@ -505,7 +510,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-4} + \sum_{n=N-4}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_6.jpg" style="width=50%" align="middle">
+<img src="images/matrix/matrix_6.jpg" style="float: bottom; width: 50%;">
 
 ]
 
