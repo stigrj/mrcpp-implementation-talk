@@ -104,7 +104,7 @@ class MWNode {
 ### - MWNode
 ]
 .right-column[
-#### Adaptividy
+#### Adaptivity
 
 <img src="images/adaptivity.jpg" style="width: 50%">
 
@@ -505,7 +505,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-4} + \sum_{n=N-4}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_1.jpg" align="middle">
+<img src="images/matrix/matrix_6.jpg" style="width=50%" align="middle">
 
 ]
 
