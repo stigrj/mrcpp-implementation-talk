@@ -54,14 +54,14 @@ template: inverse
 ```cpp
 template<int D>
 class MWTree {
-    TreeAllocator<D> allocator;         // Memory allocator
-    MultiResolutionAnalysis<D> MRA;     // World, MW basis
+    TreeAllocator<D> allocator;      // Memory allocator
+    MultiResolutionAnalysis<D> MRA;  // World, MW basis
 
-    std::vector<MWNode<D> *> rootNodes; // Root container
-    std::vector<MWNode<D> *> leafNodes; // Leaf container
+    std::vector<MWNode<D> *> roots;  // Root container
+    std::vector<MWNode<D> *> leaves; // Leaf container
 
-    double squareNorm;                  // Squared L^2 norm
-    std::vector<int> nodesAtDepth;      // Node counter
+    double squareNorm;               // Squared L^2 norm
+    std::vector<int> nodesAtDepth;   // Node counter
 }
 ```
 ]
