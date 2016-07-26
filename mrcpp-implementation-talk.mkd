@@ -651,7 +651,9 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^{N-2} + \sum_{n=N-2}^N \Bigg(C^{n} + B^{n} + A^{n}\Bigg)
+    T \approx
+    T^{N-2} +
+    \sum_{n=N-2}^N \Bigg(C^{n} + B^{n} + A^{n}\Bigg)
    $$`
 <img src="images/matrix/matrix_6.jpg" style="width: 200%; float: left">
 
@@ -677,7 +679,7 @@ layout: false
   * Separated length scales
   * MW decomposition
   `$$
-    T^{N} = T^0 + \sum_{n=0}^{N-1} \Big(C^n + B^n + A^n\big)
+    T \approx T^0 + \sum_{n=0}^{N-1} \Bigg(C^n + B^n + A^n\Bigg)
    $$`
 
 - Linear scaling
