@@ -507,9 +507,7 @@ layout: false
    $$`
 <div 
     style="background-image:url('https://github.com/stigrj/mrcpp-implementation-talk/blob/master/images/matrix/matrix_1.jpg');
-    width:50%; 
-    height:50%; 
-    background-position:center;">&nbsp;
+    background-position:center;">
 </div>
 
 ]
