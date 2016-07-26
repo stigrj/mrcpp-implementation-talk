@@ -553,7 +553,7 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1}
+    T^{N+1} = \Bigg(T^{N+1}\Bigg)
    $$`
 <img src="images/matrix/matrix_1.jpg" style="width: 150%; float: left">
 
@@ -571,7 +571,7 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = \Big(T^{N} + C^{N} + B^{N} + A^{N}\Big)
+    T^{N+1} = \Bigg(T^{N} + C^{N} + B^{N} + A^{N}\Bigg)
    $$`
 <img src="images/matrix/matrix_2.jpg" style="width: 150%; float: left">
 
@@ -629,7 +629,7 @@ layout: false
   `$$
     T^{N+1} =
     \Bigg(T^{N-1}\Bigg) +
-    \Bigg(C^{N-1} + B^{N-1} + A^{N-1}\Big) +
+    \Bigg(C^{N-1} + B^{N-1} + A^{N-1}\Bigg) +
     \Bigg(C^{N} + B^{N} + A^{N}\Bigg)
    $$`
 <img src="images/matrix/matrix_5.jpg" style="width: 150%; float: left">
