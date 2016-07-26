@@ -3,7 +3,7 @@ layout: true
 class: center, middle, inverse
 ---
 #MRCPP
-##Implementation
+##Data structures and algorithms
 
 .author[Stig Rune Jensen]
 
