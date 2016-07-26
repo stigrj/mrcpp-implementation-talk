@@ -319,7 +319,145 @@ layout: false
     \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
    $$`
 
-<img src="images/kernel_1.jpg" style="width: 100%; float: left">
+<img src="images/kernel_1.jpg" style="width: 80%; float: left">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
+   $$`
+
+<img src="images/kernel_2.jpg" style="width: 80%; float: left">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
+   $$`
+
+<img src="images/kernel_3.jpg" style="width: 80%; float: left">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
+   $$`
+
+<img src="images/kernel_4.jpg" style="width: 80%; float: left">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
+   $$`
+
+<img src="images/kernel_5.jpg" style="width: 80%; float: left">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
+   $$`
+
+<img src="images/kernel_6.jpg" style="width: 80%; float: left">
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Poisson operator
+- Poisson kernel separated in terms of Gaussians
+
+  `$$
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
+   $$`
+
+<img src="images/kernel_7.jpg" style="width: 80%; float: left">
 
 ]
 
@@ -417,7 +555,7 @@ layout: false
   `$$
     T^{N+1}
    $$`
-<img src="images/matrix/matrix_1.jpg" style="width: 100%; float: left">
+<img src="images/matrix/matrix_1.jpg" style="width: 150%; float: left">
 
 ]
 
@@ -435,7 +573,7 @@ layout: false
   `$$
     T^{N+1} = T^{N} + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_2.jpg" style="width: 100%; float: left">
+<img src="images/matrix/matrix_2.jpg" style="width: 150%; float: left">
 
 ]
 
@@ -453,7 +591,7 @@ layout: false
   `$$
     T^{N+1} = \Big(T^{N}\Big) + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_3.jpg" style="width: 100%; float: left">
+<img src="images/matrix/matrix_3.jpg" style="width: 150%; float: left">
 
 ]
 
@@ -471,7 +609,7 @@ layout: false
   `$$
     T^{N+1} = \Big(T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}\Big) + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_4.jpg" style="width: 100%; float: left">
+<img src="images/matrix/matrix_4.jpg" style="width: 150%; float: left">
 
 ]
 
@@ -489,7 +627,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-2} + \sum_{n=N-2}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_5.jpg" style="width: 100%; float: left">
+<img src="images/matrix/matrix_5.jpg" style="width: 150%; float: left">
 
 ]
 
@@ -507,7 +645,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-3} + \sum_{n=N-3}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_6.jpg" style="width: 100%; float: left">
+<img src="images/matrix/matrix_6.jpg" style="width: 150%; float: left">
 
 ]
 
