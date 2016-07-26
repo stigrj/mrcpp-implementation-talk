@@ -420,7 +420,7 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-<img src="images/matrix/matrix_1.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_1.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -438,7 +438,7 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-<img src="images/matrix/matrix_2.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_2.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -456,7 +456,7 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-<img src="images/matrix/matrix_3.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_3.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -474,7 +474,7 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-<img src="images/matrix/matrix_4.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_4.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -492,7 +492,7 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-<img src="images/matrix/matrix_5.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="images/matrix/matrix_5.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
@@ -510,25 +510,7 @@ layout: false
   `$$
     T^{N+1} = T^N + C^N + B^N + A^N
    $$`
-<img src="images/matrix/matrix_6.jpg" style="float: left; width: 100%; margin-right: 1%; margin-bottom: 0.5em;">
-
-]
-
----
-
-layout: false
-.left-column[
-## Data structures
-### - MWTree
-### - MWNode
-### - MWOperator
-]
-.right-column[
-#### Convolution operators
-  `$$
-    T^{N+1} = T^0 + \sum_{n=0}^N \Big(C^n + B^n + A^n\big)
-   $$`
-- NS form cartoon
+<img src="images/matrix/matrix_6.jpg" style="float: left; width: 200%; margin-right: 1%; margin-bottom: 0.5em;">
 
 ]
 
