@@ -503,12 +503,14 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{N+1} = T^{N-4} + \sum_{n=N-3}^N \Big(C^{n} + B^{n} + A^{n}\Big)
+    T^{N+1} = T^{N-4} + \sum_{n=N-4}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img 
-    src="images/matrix/matrix_6.jpg"
-    style="width: 200px; height: 200px;"
->
+<div 
+    style="background-image: src('images/matrix/matrix_6.jpg');
+    width:200px; 
+    height:100px; 
+    background-position:center;">&nbsp;
+</div>
 
 ]
 
