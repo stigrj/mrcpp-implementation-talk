@@ -343,9 +343,22 @@ layout: false
 ]
 .right-column[
 #### Poisson operator
-- MW representation
-- Projection of kernel
-- MW decomposition
+- Operator reduced to 1D convolutions with Gaussians
+
+  `$$ 
+    g(x) = \hat{T}f(x) = \int \alpha e^{-\beta (x-y)^2} f(y) dy
+   $$`
+
+- MW representation by scaling projection of the 2D kernel
+
+  `$$ 
+    T_{lm}^n = \int \int K(x,y) \phi_l^n(x)\phi_m^n(y) dxdy
+   $$`
+
+- `\(l\)` and `\(m\)` are translation indices of nodes
+  in the output and input functions, respectively
+
+- MW transform to obtain wavelet terms
 
   `$$
     T^{n+1} = T^n + C^n + B^n + A^n
@@ -465,17 +478,6 @@ layout: false
 
 ---
 
-## Acknowldegements
-
-- Luca Frediani
-
-- Tor Flå
-
-- Radovan Bast
-
-- Jonas Juselius
-
----
 name: last-page
 template: inverse
 
