@@ -319,7 +319,7 @@ layout: false
     \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
    $$`
 
-Poisson kernel cartoon
+<img src="images/kernel_1.jpg" style="width: 100%; float: left>
 
 ]
 
