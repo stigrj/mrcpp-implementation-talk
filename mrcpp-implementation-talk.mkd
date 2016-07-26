@@ -371,7 +371,7 @@ layout: false
 - MW representation by scaling projection of the 2D kernel
 
   `$$ 
-    T_{lm}^n = \int \int K(x,y) \phi_l^n(x)\phi_m^n(y) dxdy
+    T_{lm}^N = \int \int K(x,y) \phi_l^N(x)\phi_m^N(y) dxdy
    $$`
 
 - `\(l\)` and `\(m\)` are translation indices of nodes
@@ -380,7 +380,7 @@ layout: false
 - MW transform to obtain wavelet terms
 
   `$$
-    T^{n+1} = T^n + C^n + B^n + A^n
+    T^{N+1} = T^N + C^N + B^N + A^N
    $$`
 
 ]
@@ -397,7 +397,7 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{n+1} = T^n + C^n + B^n + A^n
+    T^{N+1} = T^N + C^N + B^N + A^N
    $$`
 - Vanishing moments cartoon
 
@@ -416,7 +416,25 @@ layout: false
 .right-column[
 #### Convolution operators
   `$$
-    T^{n+1} = T^n + C^n + B^n + A^n
+    T^{N+1} = T^N + C^N + B^N + A^N
+   $$`
+- NS form cartoon
+
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+  `$$
+    T^{N+1} = T^0 + \sum_{n=0}^N \Big(C^n + B^n + A^n\big)
    $$`
 - NS form cartoon
 
@@ -438,9 +456,12 @@ layout: false
 
 - Operator decompositions
   * Gaussian expansion
-  * Dimension
-  * Length scales
-  * MW decomposition: A, B, C and T 
+  * Separated dimension
+  * Separated length scales
+  * MW decomposition
+  `$$
+    T^{N+1} = T^0 + \sum_{n=0}^N \Big(C^n + B^n + A^n\big)
+   $$`
 
 - Linear scaling
   * Vanishing moments
