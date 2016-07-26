@@ -75,8 +75,8 @@ class MWTree {
 ]
 .right-column[
 - NodeIndex defines
-  * length scale (`\(2^{-n}\)`)
-  * translation (`\([l/2^{n},(l+1)/2^{n}]\)`)
+  * Length scale: `\(2^{-n}\)`
+  * Translation: `\([l/2^{n},(l+1)/2^{n}]\)`
 
 - Each node keeps __both__ scaling and wavelet coefficients
 
@@ -193,8 +193,8 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -211,7 +211,7 @@ layout: false
   `$$
     K(\boldsymbol{x},\boldsymbol{y}) \approx 
     \tilde{K}(\boldsymbol{x},\boldsymbol{y}) =
-    \sum_\kappa^M \alpha_\kappa \prod_{p=0}^d K_p^d(x_p,y_p)
+    \sum_\kappa^M \alpha_\kappa \prod_{p=1}^d K_p^\kappa(x_p,y_p)
    $$`
 
 - Find parameters such that
@@ -233,8 +233,8 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -255,7 +255,7 @@ layout: false
 - Poisson kernel
 
   `$$
-    P(\boldsymbol{x}-\boldsymbol{y}) = \frac{1}{4\pi\|\boldsymbol{x}-\boldsymbol{y}\|}
+    P(\boldsymbol{x},\boldsymbol{y}) = \frac{1}{4\pi\|\boldsymbol{x}-\boldsymbol{y}\|}
    $$`
 
 - Numerical problems
@@ -269,19 +269,29 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
 #### Poisson operator
 - Poisson kernel separated in terms of Gaussians
-
   `$$
-    P(\boldsymbol{x}-\boldsymbol{y}) \approx
-    \tilde{P}(\boldsymbol{x}-\boldsymbol{y}) =
-    \sum_\kappa^M \alpha_{\kappa} \prod_{p=0}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
+    \tilde{P}(\boldsymbol{x},\boldsymbol{y}) =
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
    $$`
+
+- Expansion obtained from the relation
+  `$$ \frac{1}{r} = \frac{4}{\pi} \int_0^\infty e^{-4r^2t^2} dt $$`
+
+- Substitution: `\(t = log(1+e^u)-u\)`
+  `$$ \frac{1}{r} = \frac{4}{\pi} \int_{-\infty}^{\infty} f_1(u) du $$`
+
+- Substitution: `\(u = -sinh(w)\)`
+  `$$ \frac{1}{r} = \frac{4}{\pi} \int_{-\infty}^{\infty} f_2(w) dw $$`
+
+- Super-exponential decay for `\(w \rightarrow \pm \infty\)` 
 ]
 
 ---
@@ -289,8 +299,8 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -298,9 +308,9 @@ layout: false
 - Poisson kernel separated in terms of Gaussians
 
   `$$
-    P(\boldsymbol{x}-\boldsymbol{y}) \approx
+    P(\boldsymbol{x},\boldsymbol{y}) \approx
     \tilde{P}(\boldsymbol{x}-\boldsymbol{y}) =
-    \sum_\kappa^M \alpha_{\kappa} \prod_{p=0}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
    $$`
 
 Poisson kernel cartoon
@@ -312,8 +322,8 @@ Poisson kernel cartoon
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -323,7 +333,7 @@ layout: false
   `$$
     P(\boldsymbol{x}-\boldsymbol{y}) \approx
     \tilde{P}(\boldsymbol{x}-\boldsymbol{y}) =
-    \sum_\kappa^M \alpha_{\kappa} \prod_{p=0}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
+    \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}\|x_p-y_p\|}
    $$`
 
 - Solves numerical problems
@@ -337,8 +347,8 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -371,8 +381,8 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -390,8 +400,8 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
@@ -408,8 +418,8 @@ layout: false
 layout: false
 .left-column[
 ## Data structures
-### - MWNode
 ### - MWTree
+### - MWNode
 ### - MWOperator
 ]
 .right-column[
