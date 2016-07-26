@@ -319,7 +319,7 @@ layout: false
     \sum_\kappa^M \alpha_{\kappa} \prod_{p=1}^d e^{-\beta_{\kappa}(x_p-y_p)^2}
    $$`
 
-<img src="images/kernel_1.jpg" style="width: 100%; float: left>
+<img src="images/kernel_1.jpg" style="width: 100%; float: left">
 
 ]
 
@@ -417,7 +417,7 @@ layout: false
   `$$
     T^{N+1}
    $$`
-<img src="images/matrix/matrix_1.jpg" style="width: 100%; float: left>
+<img src="images/matrix/matrix_1.jpg" style="width: 100%; float: left">
 
 ]
 
@@ -435,7 +435,7 @@ layout: false
   `$$
     T^{N+1} = T^{N} + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_2.jpg" style="width: 100%; float: left>
+<img src="images/matrix/matrix_2.jpg" style="width: 100%; float: left">
 
 ]
 
@@ -453,7 +453,7 @@ layout: false
   `$$
     T^{N+1} = \Big(T^{N}\Big) + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_3.jpg" style="width: 100%; float: left>
+<img src="images/matrix/matrix_3.jpg" style="width: 100%; float: left">
 
 ]
 
@@ -471,7 +471,7 @@ layout: false
   `$$
     T^{N+1} = \Big(T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}\Big) + C^{N} + B^{N} + A^{N}
    $$`
-<img src="images/matrix/matrix_4.jpg" style="width: 100%; float: left>
+<img src="images/matrix/matrix_4.jpg" style="width: 100%; float: left">
 
 ]
 
@@ -489,7 +489,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-2} + \sum_{n=N-2}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_5.jpg" style="width: 100%; float: left>
+<img src="images/matrix/matrix_5.jpg" style="width: 100%; float: left">
 
 ]
 
@@ -507,7 +507,7 @@ layout: false
   `$$
     T^{N+1} = T^{N-3} + \sum_{n=N-3}^N \Big(C^{n} + B^{n} + A^{n}\Big)
    $$`
-<img src="images/matrix/matrix_6.jpg" style="width: 100%; float: left>
+<img src="images/matrix/matrix_6.jpg" style="width: 100%; float: left">
 
 ]
 
