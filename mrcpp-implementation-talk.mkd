@@ -190,6 +190,35 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
 
 ---
 
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+]
+.right-column[
+#### Multiple dimensions
+
+- Extenstion to 2D by tensor product
+
+ `$$$
+    V^n \otimes V^n
+  $$$`
+
+- Wavelet decomposition results in several wavelet spaces
+
+ `$$$
+    V^n \otimes V^n = 
+    \Big(V^{n-1} \oplus W^{n-1}\Big) \otimes
+    \Big(V^{n-1} \oplus W^{n-1}\Big) = 
+    \Big(V^{n-1} \otimes V^{n-1}\Big) \oplus
+    \Big(V^{n-1} \otimes W^{n-1}\Big) \oplus
+    \Big(W^{n-1} \otimes V^{n-1}\Big) \oplus
+    \Big(W^{n-1} \otimes W^{n-1}\Big)
+  $$$`
+]
+
+---
+
 layout: false
 .left-column[
 ## Data structures
@@ -487,6 +516,9 @@ layout: false
   * Separates coordinates
   * Remove singularity
   * Separates length scales
+
+- However
+  * `\(M\)` convolution operators instead of one
 ]
 
 ---
@@ -515,7 +547,7 @@ layout: false
 - `\(l\)` and `\(m\)` are translation indices of nodes
   in the output and input functions, respectively
 
-- MW transform to obtain wavelet terms
+- MW transform to obtain wavelet terms (2D gives 4 components)
 
   `$$
     T^{N} = T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}
@@ -537,6 +569,8 @@ layout: false
   `$$
     T^{N} = T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}
    $$`
+
+#### Vanishing moments
 
 <img src="images/vanishing_moments.jpg" style="width: 100%; float: left">
 
@@ -697,12 +731,140 @@ layout: false
 .left-column[
 ## Algorithms
 ### - Adaptivity
-### - Thresholding
 ]
 .right-column[
-- Tree building algorithm
-- Function thresholding
-- MW transforms
+- MWTrees are built adaptively
+
+Algorithm
+
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Adaptivity
+]
+.right-column[
+- MWTrees are built adaptively
+
+- calcNode()
+  * Projection
+  * Addition
+  * Multiplication
+  * Operator application
+
+- splitCheck()
+  * based on wavelet norm
+
+  `$$$
+    \|w_l^n\| \geq \epsilon \frac{\|f\|}{2^{-n/2}}
+   $$$`
+
+- mwTransform(BottomUp)
+  * wavelet decomposition from leaf to root
+  * update coarser scaling coefficients
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Projection
+]
+.right-column[
+- Perform scaling projection at scale `\(n+1\)`
+
+  `$$$
+    s_{jl}^{n+1} = \int f(x)\phi_{jl}^{n+1}(x) dx
+    \approx 2^{-(n+1)/2} w_jf(2^{n+1}x_j - l)
+   $$$`
+
+- Interpolating property of the basis
+
+- MW transform provides the scaling/wavelet coefficients
+
+  `$$$
+    V^{n+1} \rightarrow V^n \oplus W^n
+   $$$`
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Projection
+### - Addition
+]
+.right-column[
+- Sum is fully contained in the same space
+
+  `$$$
+    V_k^n + V_K^n \rightarrow V_k^n
+   $$$`
+
+- Perform addition node by node
+
+  `$$$
+    s_{jl}^{f,n} = s_{jl}^{g,n} + s_{jl}^{h,n} 
+    w_{jl}^{f,n} = w_{jl}^{g,n} + w_{jl}^{h,n} 
+   $$$`
+
+- Could in principle interpolate from finest refinement level
+
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Projection
+### - Addition
+### - Multiplication
+]
+.right-column[
+- Product spills over into finer scales
+
+  `$$$
+    V_k^n \times V_k^n \rightarrow V_{2k}^n = V_k^n 
+    \bigoplus_{m=n}^{\infty} W_k^m
+   $$$`
+
+- Perform multiplication node by node at scale `\(n+1\)`
+
+  `$$$
+    s_{jl}^{f,(n+1)} = s_{jl}^{g,(n+1)} * s_{jl}^{h,(n+1)} 
+   $$$`
+
+- MW transform provides the scaling/wavelet coefficients
+
+  `$$$
+    V^{n+1} \rightarrow V^n \oplus W^n
+   $$$`
+
+- Adaptive algorithm takes care of the "spill over"
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Projection
+### - Addition
+### - Multiplication
+### - Operator application
+]
+.right-column[
+- Operator applied one scale at the time (NS form)
+
+  `$$$
+    s_{jl}^{f,n} = \sum_m o_{lm}^{n} * s_{jm}^{f,n} 
+   $$$`
 ]
 
 ---
