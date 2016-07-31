@@ -828,7 +828,7 @@ layout: false
 - Sum is fully contained in the same space
 
   `$$
-    V_k^n + V_K^n \rightarrow V_k^n
+    V_k^n + V_k^n \rightarrow V_k^n
    $$`
 
 - Perform addition node by node
@@ -836,6 +836,8 @@ layout: false
   * Fetch corresponding nodes of input
 
   * Add coefficients
+
+- No extra information beyond finest level
 
 - Could in principle interpolate from finest refinement level
 
@@ -854,17 +856,17 @@ layout: false
 - Product spills over into finer scales
 
   `$$
-    V_k^n \times V_k^n \rightarrow V_{2k}^n = V_k^n 
+    V_k^n \times V_k^n \rightarrow V_{2k}^n = V_k^n \oplus
     \bigoplus_{m=n}^{\infty} W_k^m
    $$`
 
 - Perform multiplication node by node
   * Fecth corresponding nodes of input
-  * MW transform provides `\(n+1\)` scaling coefficients of inputs 
+  * MW transform provides `\(n+1\)` scaling coeffs of inputs 
   * CV transform provides function values of inputs
   * Function values are multiplied pointwise
-  * CV transform provides `\(n+1\)` scaling coefficients of output
-  * MW transform provides scaling/wavelet coefficients of output
+  * CV transform provides `\(n+1\)` scaling coeffs of output
+  * MW transform provides scaling/wavelet coeffs of output
 
 - Adaptive algorithm takes care of the "spill over"
 
