@@ -200,21 +200,21 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
 
 - Extenstion to 2D by tensor product
 
- `$$$
+ `$$
     V^n \otimes V^n
-  $$$`
+  $$`
 
 - Wavelet decomposition results in several wavelet spaces
 
- `$$$
+ `$$
     V^n \otimes V^n = 
     \Big(V^{n-1} \oplus W^{n-1}\Big) \otimes
-    \Big(V^{n-1} \oplus W^{n-1}\Big) = 
+    \Big(V^{n-1} \oplus W^{n-1}\Big) = \\
     \Big(V^{n-1} \otimes V^{n-1}\Big) \oplus
     \Big(V^{n-1} \otimes W^{n-1}\Big) \oplus
     \Big(W^{n-1} \otimes V^{n-1}\Big) \oplus
     \Big(W^{n-1} \otimes W^{n-1}\Big)
-  $$$`
+  $$`
 ]
 
 ---
