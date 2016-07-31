@@ -789,23 +789,25 @@ layout: false
 ### - Projection
 ]
 .right-column[
-- Perform scaling projection at scale `\(n+1\)`
+- Scaling coefficients obtained by the projection
 
   `$$
-    s_{jl}^{n+1} = \int f(x)\phi_{jl}^{n+1}(x) dx
+    s_{jl}^n = \int f(x)\phi_{jl}^n(x) dx
    $$`
 
 - Approximated by Gauss-Legendre quadrature
 
   `$$
-    s_{jl}^{n+1} \approx 2^{-(n+1)/2} \sum_q \omega_q f(2^{-(n+1)}x_q + l)\phi(x_q)
+    s_{jl}^n \approx 2^{-n/2} \sum_q \omega_q f(2^{-n}x_q + l)\phi(x_q)
    $$`
 
-- Interpolating basis `\(\phi_j(x_i) = \frac{\delta_{ij}}{\sqrt{\omega_i}}\)`
+- Interpolating basis `\(\phi_j(x_i) = \delta_{ij}/\sqrt{\omega_i}\)`
 
   `$$
-    s_{jl}^{n+1} \approx 2^{-(n+1)/2} \omega_j f(2^{-(n+1)}x_j + l)\phi(x_j)
+    s_{jl}^n \approx 2^{-n/2} \omega_j f(2^{-n}x_j + l)\phi(x_j)
    $$`
+
+- Perform scaling projection at the `\(n+1\)` quadrature points
 
 - MW transform provides the s/w coefficients at scale `\(n\)`
 
