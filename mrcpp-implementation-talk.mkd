@@ -198,7 +198,7 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
 .right-column[
 #### Multiple dimensions
 
-- Extenstion to `\(d{)` dimensions by tensor product
+- Extenstion to `\(d\)` dimensions by tensor product
 
  `$$
     \Big(V^n\Big)^d = \bigotimes_{p=1}^d V^n
@@ -217,14 +217,7 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
     = \Big(V^n\Big)^2\oplus \Big(W^n\Big)^2
   $$`
 
- `$$
-    \Big(W^{n+1}\Big)^d =
-    \Big(V^{n} \otimes W^{n}\Big) \oplus
-    \Big(W^{n} \otimes V^{n}\Big) \oplus
-    \Big(W^{n} \otimes W^{n}\Big)
-  $$`
-
-- Wavelet space of dimension `\(2^d-1\)`
+- Wavelet space has dimension `\(2^d-1\)`
 ]
 
 ---
@@ -551,7 +544,7 @@ layout: false
 - MW representation by scaling projection of the 2D kernel
 
   `$$ 
-    T_{lm}^N = \int \int K(x,y) \phi_l^N(x)\phi_m^N(y) dxdy
+    \tau_{lm}^N = \int \int K(x,y) \phi_l^N(x)\phi_m^N(y) dxdy
    $$`
 
 - `\(l\)` and `\(m\)` are translation indices of nodes
@@ -748,8 +741,8 @@ layout: false
 ```
 while number of nodes in current list > 0 do
     for each output node in current list do
-        calcNode()
-        if splitNode() do
+        calc node
+        if split check do
             allocate children nodes
         end if
     end for
@@ -769,20 +762,20 @@ layout: false
 .right-column[
 - MWTrees are built adaptively
 
-- calcNode()
+- calc node
   * Projection
   * Addition
   * Multiplication
   * Operator application
 
-- splitNode()
-  * based on wavelet norm
+- split check
+  * based on wavelet norm (in practice `\(d=1\)`
 
   `$$
-    \|w_l^n\| \geq \epsilon \frac{\|f\|}{2^{-n/2}}
+    \|w_l^n\| \geq \epsilon \frac{\|f\|}{2^{-dn/2}}
    $$`
 
-- mwTransform(BottomUp)
+- MW transform
   * wavelet decomposition from leaf to root
   * update coarser scaling coefficients
 ]
@@ -792,6 +785,7 @@ layout: false
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
 ### - Projection
 ]
 .right-column[
@@ -799,12 +793,21 @@ layout: false
 
   `$$
     s_{jl}^{n+1} = \int f(x)\phi_{jl}^{n+1}(x) dx
-    \approx 2^{-(n+1)/2} w_jf(2^{n+1}x_j - l)
    $$`
 
-- Interpolating property of the basis
+- Approximated by Gauss-Legendre quadrature
 
-- MW transform provides the scaling/wavelet coefficients
+  `$$
+    s_{jl}^{n+1} \approx 2^{-(n+1)/2} \sum_q \omega_q f(2^{-(n+1)}x_q + l)\phi(x_q)
+   $$`
+
+- Interpolating basis `\(\phi_j(x_i) = \frac{\delta_{ij}}{\sqrt{\omega_i}}\)`
+
+  `$$
+    s_{jl}^{n+1} \approx 2^{-(n+1)/2} \omega_j f(2^{-(n+1)}x_j + l)\phi(x_j)
+   $$`
+
+- MW transform provides the s/w coefficients at scale `\(n\)`
 
   `$$
     V^{n+1} \rightarrow V^n \oplus W^n
