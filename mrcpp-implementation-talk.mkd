@@ -1017,16 +1017,15 @@ layout: false
 ]
 .right-column[
 - Parallelization with OpenMP
-
-<img src="images/openmp.jpg" style="width: 50%; float: left">
-
-- OpenMP
   * Shared memory
   * Thread based
   * Work distribution through loops
   * No data distribution
-  * Synchronization implicit
+  * Implicit synchronization
   * No communication
+
+<img src="images/openmp.jpg" style="width: 50%; float: left">
+
 ]
 
 ---
@@ -1036,7 +1035,7 @@ layout: false
 ## Parallelization
 ]
 .right-column[
-- Shared memory parallelization with OpenMP
+- Parallelization with OpenMP
 
 - Pros
   * Relatively simple implementation
