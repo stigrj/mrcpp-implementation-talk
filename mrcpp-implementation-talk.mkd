@@ -1045,6 +1045,24 @@ end while
 ```
 
 ]
+
+---
+
+layout: false
+.left-column[
+## Parallelization
+]
+.right-column[
+#### Parallel performance Poisson operator
+
+- Test calculations on diamond systems
+
+- Fitted curve `\(t(n) = 11.6 + 1.84^{0.805}\)`
+
+<img src="images/diamond.jpg" style="width: 80%; float: left">
+<img src="images/diamond_scaling.jpg" style="width: 80%; float: left">
+]
+
 ---
 
 layout: false
@@ -1065,23 +1083,6 @@ layout: false
   * Focus on sequential optimization and weak scaling
 ]
 
----
-
-layout: false
-.left-column[
-## Parallelization
-]
-.right-column[
-#### Parallel performance Poisson operator
-
-- Test calculations on diamond systems
-
-- Fitted curve `\(t(n) = 11.6 + 1.84^{0.805}\)`
-
-<img src="images/diamond.jpg" style="width: 80%; float: left">
-<img src="images/diamond_scaling.jpg" style="width: 80%; float: left">
-]
-
 
 ---
 
@@ -1091,6 +1092,8 @@ layout: false
 ]
 .right-column[
 - Amdahl's law
+
+<img src="images/amdahl.jpg" style="width: 80%; float: left">
 ]
 
 ---
