@@ -708,6 +708,28 @@ layout: false
 .right-column[
 #### Convolution operators
 
+- Wavelet components are bounded as
+
+  `$$
+    \|A_{l-m}\|_2 + \|B_{l-m}\|_2 + \|C_{l-m}\|_2 \leq 
+    \frac{1}{1 + |l-m|^{k+2}}
+   $$`
+
+- Terms beyond a certain __bandwidth__ are neglected
+]
+
+---
+
+layout: false
+.left-column[
+## Data structures
+### - MWTree
+### - MWNode
+### - MWOperator
+]
+.right-column[
+#### Convolution operators
+
 - MW operators are 2D trees
 
 - Operator decompositions
@@ -740,13 +762,13 @@ layout: false
 
 ```
 while number of nodes in current list > 0 do
-    for each output node in current list do
-        calc node
-        if split check do
-            allocate children nodes
-        end if
-    end for
-    update list with children nodes
+  for each output node in current list do
+    calc node
+    if split check do
+      allocate children nodes
+    end if
+  end for
+  update list with children nodes
 end while
 ```
 
@@ -821,6 +843,7 @@ layout: false
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
 ### - Projection
 ### - Addition
 ]
@@ -848,6 +871,7 @@ layout: false
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
 ### - Projection
 ### - Addition
 ### - Multiplication
@@ -866,7 +890,7 @@ layout: false
   * CV transform provides function values of inputs
   * Function values are multiplied pointwise
   * CV transform provides `\(n+1\)` scaling coeffs of output
-  * MW transform provides scaling/wavelet coeffs of output
+  * MW transform provides s/w coeffs of output
 
 - Adaptive algorithm takes care of the "spill over"
 
@@ -878,13 +902,61 @@ layout: false
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
 ### - Projection
 ### - Addition
 ### - Multiplication
 ### - Operator application
 ]
 .right-column[
-- calcNode()
+
+- Operator applied separately at each length scale (NS form)
+
+- Interactions __between__ length scales by MW transform
+
+- Missing nodes in the input function are generated __once__ by
+  MW transform and kept in the tree for later use
+
+- Bandwidths arranged as
+
+  `$$
+    A < B,C < T
+   $$`
+
+- 3D bandwidths form cubes and rods (`\(T \times A \times A\)`) 
+
+- Only pure scaling (`\(T \times T \times T\)`) discarded in NS form
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Adaptivity
+### - Projection
+### - Addition
+### - Multiplication
+### - Operator application
+]
+.right-column[
+- Adaptive algorithm
+
+```
+while number of nodes in current list > 0 do
+  for each output node in current list do
+    calc node
+    if split check do
+      allocate children nodes
+    end if
+  end for
+  update list with children nodes
+end while
+
+pass information from root to leaf (MW transform)
+```
+
+- calc node
 
 ```
 construct maximum bandwidth in all directions
@@ -911,18 +983,19 @@ end for
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
 ### - Projection
 ### - Addition
 ### - Multiplication
 ### - Operator application
 ]
 .right-column[
+#### Linear scaling
 
-- Operator applied one scale at the time (NS form)
+- Test calculations on linear alkane chains `\(C_nH_{2n+2}\)`
 
-- Missing nodes in the input function are generated __once__ by MW transform
-  and kept in the tree for later use
-
+<img src="images/alkane.jpg" style="width: 50%; float: left">
+<img src="images/alkane_scaling_1.jpg" style="width: 50%; float: left">
 ]
 
 ---
@@ -930,20 +1003,19 @@ layout: false
 layout: false
 .left-column[
 ## Algorithms
+### - Adaptivity
 ### - Projection
 ### - Addition
 ### - Multiplication
 ### - Operator application
 ]
 .right-column[
-- Interpolating property
-- cvTransform
-- mwTransform
-- NS form
-- Bandwidths
-- Pointer array
-- Operator thresholding
-- GenNodes
+#### Linear scaling
+
+- Test calculations on linear alkane chains `\(C_nH_{2n+2}\)`
+
+<img src="images/alkane.jpg" style="width: 50%; float: left">
+<img src="images/alkane_scaling_2.jpg" style="width: 50%; float: left">
 ]
 
 ---
