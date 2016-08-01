@@ -1016,11 +1016,40 @@ layout: false
 ## Parallelization
 ]
 .right-column[
+- Parallelization with OpenMP
+
+<img src="images/openmp.jpg" style="width: 50%; float: left">
+
+- OpenMP
+  * Shared memory
+  * Thread based
+  * Work distribution through loops
+  * No data distribution
+  * Synchronization implicit
+  * No communication
+]
+
+---
+
+layout: false
+.left-column[
+## Parallelization
+]
+.right-column[
 - Shared memory parallelization with OpenMP
 
-- Work distribution at the MWNode level
+- Pros
+  * Relatively simple implementation
+  * Quick way to good performance
+  * No communication
+  * Simple load balancing
 
-- Keep things simple
+- Cons
+  * Small scale parallelization (< ~50 CPUs)
+  * Limited memory
+  * Race conditions
+  * Dead locks
+  * Tedious debugging (Heisenbugs)
 ]
 
 ---
