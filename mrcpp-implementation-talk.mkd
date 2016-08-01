@@ -201,7 +201,7 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
 - Extenstion to `\(d\)` dimensions by tensor product
 
  `$$
-    \Big(V^n\Big)^d = \bigotimes_{p=1}^d V^n
+    \Big(V^n\Big)^d = \bigotimes^d V^n
   $$`
 
 - Wavelet decomposition i 2D
@@ -972,6 +972,7 @@ layout: false
 ### - Addition
 ### - Multiplication
 ### - Operator application
+### - Example
 ]
 .right-column[
 #### Linear scaling
@@ -994,6 +995,7 @@ layout: false
 ### - Addition
 ### - Multiplication
 ### - Operator application
+### - Example
 ]
 .right-column[
 #### Linear scaling
@@ -1037,8 +1039,6 @@ layout: false
 ### OpenMP
 ]
 .right-column[
-- Parallelization with OpenMP
-
 - Pros
   * Relatively simple implementation
   * Quick way to good performance
@@ -1113,7 +1113,7 @@ layout: false
   * Each function distributed among MPI hosts
   * Nodes distributed following strictly localized paths
   * Each MPI further decomposed in OpenMP
-  * Required large function representations with `\(\sim 10^6\)` nodes
+  * Required large representations with `\(\sim 10^6\)` nodes
   * Actual function representations `\(\sim 10^3-10^4\)` nodes
   * Overlapping OpenMP and MPI levels of parallelization
 
@@ -1136,7 +1136,7 @@ layout: false
 ### Strategies
 ]
 .right-column[
-- Amdahl's law
+- Amdahl's law of parallel efficiency
 
 <img src="images/amdahl.jpg" style="width: 100%; float: left">
 ]
