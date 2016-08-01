@@ -763,7 +763,7 @@ layout: false
 ```
 while number of nodes in current list > 0 do
   for each output node in current list do
-    calc node
+    compute node
     if split check do
       allocate children nodes
     end if
@@ -784,7 +784,7 @@ layout: false
 .right-column[
 - MWTrees are built adaptively
 
-- calc node
+- compute node
   * Projection
   * Addition
   * Multiplication
@@ -940,7 +940,7 @@ layout: false
 ### - Operator application
 ]
 .right-column[
-- calc node operator application
+- compute node operator application
 
 ```
 construct maximum bandwidth in all directions
@@ -978,8 +978,9 @@ layout: false
 
 - Test calculations on linear alkane chains `\(C_nH_{2n+2}\)`
 
-<img src="images/alkane.jpg" style="width: 50%; float: left">
-<img src="images/alkane_scaling_1.jpg" style="width: 50%; float: left">
+<img src="images/alkane.jpg" style="width: 80%; float: left">
+
+<img src="images/alkane_scaling_1.jpg" style="width: 80%; float: left">
 ]
 
 ---
@@ -998,13 +999,49 @@ layout: false
 
 - Test calculations on linear alkane chains `\(C_nH_{2n+2}\)`
 
-<img src="images/alkane.jpg" style="width: 50%; float: left">
-<img src="images/alkane_scaling_2.jpg" style="width: 50%; float: left">
+<img src="images/alkane.jpg" style="width: 80%; float: left">
+
+<img src="images/alkane_scaling_2.jpg" style="width: 80%; float: left">
 ]
 
 ---
 template: inverse
 # Parallelization
+---
+
+layout: false
+.left-column[
+## Parallelization
+]
+.right-column[
+- Shared memory parallelization with OpenMP
+
+- Work distribution at the (MW) node level
+]
+
+---
+
+layout: false
+.left-column[
+## Parallelization
+]
+.right-column[
+- Tree building algorithm
+
+```
+while number of nodes in current list > 0 do
+  for each output node in current list do
+    compute node
+    if split check do
+      allocate children nodes
+    end if
+  end for
+  update list with children nodes
+end while
+```
+
+]
+
 ---
 
 layout: false
@@ -1032,35 +1069,7 @@ layout: false
 ## Parallelization
 ]
 .right-column[
-- Currently changing strategies
-
-- Shared memory (OpenMP) within each function
-
-- Whole functions distributed among MPI hosts
-
-]
-
----
-
-layout: false
-.left-column[
-## Parallelization
-]
-.right-column[
-- Tree building algorithm
-
-```
-while number of nodes in current list > 0 do
-    for each output node in current list do
-        calcNode()
-        if splitNode() do
-            allocate children nodes
-        end if
-    end for
-    update list with children nodes
-end while
-```
-
+- Amdahl's law
 ]
 
 ---
