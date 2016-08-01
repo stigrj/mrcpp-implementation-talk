@@ -980,7 +980,7 @@ layout: false
 
 - Fitted curve `\(t(n) = 12.5 + 2.34n^{0.754}\)`
 
-<img src="images/alkane.jpg" style="width: 100%; float: left">
+<img src="images/alkane.jpg" style="width: 80%; float: left">
 <img src="images/alkane_scaling_1.jpg" style="width: 80%; float: left">
 ]
 
@@ -1002,7 +1002,7 @@ layout: false
 
 - Fitted curve `\(t(n) = -6.0 + 1.33n^{0.991}\)`
 
-<img src="images/alkane.jpg" style="width: 100%; float: left">
+<img src="images/alkane.jpg" style="width: 80%; float: left">
 <img src="images/alkane_scaling_2.jpg" style="width: 80%; float: left">
 ]
 
@@ -1059,8 +1059,8 @@ layout: false
 
 - Fitted curve `\(t(n) = 11.6 + 1.84^{0.805}\)`
 
-<img src="images/diamond.jpg" style="width: 80%; float: left">
-<img src="images/diamond_scaling.jpg" style="width: 80%; float: left">
+<img src="images/diamond.jpg" style="width: 50%; float: left">
+<img src="images/diamond_scaling.jpg" style="width: 50%; float: left">
 ]
 
 ---
@@ -1093,7 +1093,7 @@ layout: false
 .right-column[
 - Amdahl's law
 
-<img src="images/amdahl.jpg" style="width: 80%; float: left">
+<img src="images/amdahl.jpg" style="width: 100%; float: left">
 ]
 
 ---
