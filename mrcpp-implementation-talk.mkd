@@ -711,7 +711,7 @@ layout: false
 - Wavelet components are bounded as
 
   `$$
-    \|A_{l-m}\|_2 + \|B_{l-m}\|_2 + \|C_{l-m}\|_2 \leq 
+    \|A_{l-m}\| + \|B_{l-m}\| + \|C_{l-m}\| \leq 
     \frac{1}{1 + |l-m|^{k+2}}
    $$`
 
@@ -791,7 +791,7 @@ layout: false
   * Operator application
 
 - split check
-  * based on wavelet norm (in practice `\(d=1\)`
+  * based on wavelet norm (in practice `\(d=1\)`)
 
   `$$
     \|w_l^n\| \geq \epsilon \frac{\|f\|}{2^{-dn/2}}
@@ -940,23 +940,7 @@ layout: false
 ### - Operator application
 ]
 .right-column[
-- Adaptive algorithm
-
-```
-while number of nodes in current list > 0 do
-  for each output node in current list do
-    calc node
-    if split check do
-      allocate children nodes
-    end if
-  end for
-  update list with children nodes
-end while
-
-pass information from root to leaf (MW transform)
-```
-
-- calc node
+- calc node operator application
 
 ```
 construct maximum bandwidth in all directions
