@@ -793,21 +793,15 @@ layout: false
 - Three types of convolution operators
   * Poisson kernel
 
-  `$$
-    K(x,y) = \frac{1}{4\pi\|x-y\|}
-   $$`
+  `$$ K(x,y) = \frac{1}{4\pi\|x-y\|} $$`
 
   * Bound-State Helmholtz kernel
 
-  `$$
-    K(x,y) = \frac{e^{-\mu\|x-y\|}}{4\pi\|x-y\|}
-   $$`
+  `$$ K(x,y) = \frac{e^{-\mu\|x-y\|}}{4\pi\|x-y\|} $$`
 
   * Derivative kernel
 
-  `$$
-    K(x,y) = \frac{d}{dx}\delta(x-y)
-   $$`
+  `$$ K(x,y) = \frac{d}{dx}\delta(x-y) $$`
 
 - Derivative operator of Alpert, Beylkin, Gines and Vozovoi
 ]
@@ -860,9 +854,7 @@ layout: false
 - split check
   * based on wavelet norm (in practice `\(d=1\)`)
 
-  `$$
-    \|w_l^n\| < \epsilon 2^{-dn/2} \|f\|
-   $$`
+  `$$ \|w_l^n\| < 2^{-dn/2} \|f\| \epsilon_w $$`
 
 - MW transform
   * wavelet decomposition from leaf to root
@@ -989,9 +981,7 @@ layout: false
 
 - Bandwidths arranged as
 
-  `$$
-    A < B,C < T
-   $$`
+  `$$ A < B,C < T $$`
 
 - 3D bandwidths form cubes and rods (`\(T \times A \times A\)`) 
 
@@ -1060,7 +1050,7 @@ layout: false
 
 - Wavelet threshold of the result
 
-  `$$ \|w_l^n\| < \epsilon_w 2^{-n/2}\|g\| $$`
+  `$$ \|w_l^n\| < 2^{-n/2} \|g\| \epsilon_w $$`
 
 - To obtain accuracy `\(\epsilon\)` in the result
 
