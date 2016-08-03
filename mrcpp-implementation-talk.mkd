@@ -890,7 +890,7 @@ layout: false
 
 - Perform scaling projection at the `\(n+1\)` quadrature points
 
-- MW transform provides the s/d coefficients at scale `\(n\)`
+- MW transform provides the s/w coefficients at scale `\(n\)`
 
   `$$
     V^{n+1} \rightarrow V^n \oplus W^n
