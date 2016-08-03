@@ -25,7 +25,7 @@ layout: false
 
 - Configuration with [Autocmake](https://github.com/coderefinery/autocmake)
 
-- Testing with [Catch](https://github.com/philsquared/Catch)
+- Unit testing with [Catch](https://github.com/philsquared/Catch)
 
 - Matrix/vector manipulations with [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 
