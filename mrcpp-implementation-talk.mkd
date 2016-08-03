@@ -19,27 +19,20 @@ layout: false
 ## Technical stuff
 ]
 .right-column[
-- Hosted on [GitHub]
+- Hosted on [GitHub](https://github.com/MRChemSoft/mrchem)
 
-- Documentation on [ReadTheDocs]
+- Documentation on [ReadTheDocs](http://mrchemdoc.readthedocs.io/en/latest/)
 
-- Configuration with [Autocmake]
+- Configuration with [Autocmake](https://github.com/coderefinery/autocmake)
 
-- Testing with [Catch]
+- Testing with [Catch](https://github.com/philsquared/Catch)
 
-- Basic matrix/vector manipulations with [Eigen]
+- Basic matrix/vector manipulations with [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 
-- Number crunching with [BLAS]
+- Number crunching with [BLAS](http://www.netlib.org/blas/)
 
-- Parallelization with [OpenMP]
+- Parallelization with [OpenMP](http://openmp.org/wp/)
 
-[GitHub]: https://github.com/MRChemSoft/mrchem
-[ReadTheDocs]: http://mrchemdoc.readthedocs.io/en/latest/
-[Autocmake]: https://github.com/coderefinery/autocmake
-[Catch]: https://github.com/philsquared/Catch
-[Eigen]: http://eigen.tuxfamily.org/index.php?title=Main_Page
-[BLAS]: http://www.netlib.org/blas/
-[OpenMP]: http://openmp.org/wp/
 ]
 
 ---
