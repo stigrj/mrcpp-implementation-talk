@@ -27,7 +27,7 @@ layout: false
 
 - Testing with [Catch](https://github.com/philsquared/Catch)
 
-- Basic matrix/vector manipulations with [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
+- Matrix/vector manipulations with [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 
 - Number crunching with [BLAS](http://www.netlib.org/blas/)
 
