@@ -50,70 +50,70 @@ template: inverse
 layout: false
 ## Multiwavelets
 
-<img src="images/scalingbasis.jpg" style="width: 70%; float: center">
+<img src="images/scalingbasis.jpg" style="width: 70%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/refinement.jpg" style="width: 70%; float: center">
+<img src="images/refinement.jpg" style="width: 70%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/unifgrid.jpg" style="width: 70%; float: center">
+<img src="images/unifgrid.jpg" style="width: 70%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/f0.jpg" style="width: 70%; float: center">
+<img src="images/f0.jpg" style="width: 80%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/f1.jpg" style="width: 70%; float: center">
+<img src="images/f1.jpg" style="width: 80%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/f2.jpg" style="width: 70%; float: center">
+<img src="images/f2.jpg" style="width: 80%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/f3.jpg" style="width: 70%; float: center">
+<img src="images/f3.jpg" style="width: 80%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/f4.jpg" style="width: 70%; float: center">
+<img src="images/f4.jpg" style="width: 80%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/adaptivity.jpg" style="width: 70%; float: center">
+<img src="images/adaptivity.jpg" style="width: 70%; float: right">
 
 ---
 
 layout: false
 ## Multiwavelets
 
-<img src="images/adapgrid.jpg" style="width: 70%; float: center">
+<img src="images/adapgrid.jpg" style="width: 70%; float: right">
 
 ---
 template: inverse
@@ -190,29 +190,15 @@ class MWNode {
 ### - MWNode
 ]
 .right-column[
-
-
-
-<img src="images/adaptivity.jpg" style="width: 80%">
-]
-
----
-
-.left-column[
-## Data structures
-### - MWTree
-### - MWNode
-]
-.right-column[
 #### Representations
 
 - MRA allows for fine-scale representation
 
-  `$$ f^N = \sum_{l=0}^{2^N-1}\sum_{j=0}^{k} s_{jl}^N \phi_{jl}^N(x) $$`
+  `$$ f(x) \approx f^N(x) = \sum_{l=0}^{2^N-1}\sum_{j=0}^{k} s_{jl}^N \phi_{jl}^N(x) $$`
 
 - or multi-scale representation
 
-  `$$ f^N = \sum_{j=0}^{k} s_{jl}^0 \phi_{jl}^0(x) +
+  `$$ f(x) \approx f^N(x) = \sum_{j=0}^{k} s_{jl}^0 \phi_{jl}^0(x) +
   \sum_{n=0}^{N-1}\sum_{l=0}^{2^N-1}\sum_{j=0}^{k} w_{jl}^n \psi_{jl}^n(x) $$`
 
 - We keep a __redundant__ representation of both scaling and wavelet
@@ -630,7 +616,7 @@ layout: false
 - MW representation by scaling projection of the 2D kernel
 
   `$$ 
-    \tau_{lm}^N = \int \int K(x,y) \phi_l^N(x)\phi_m^N(y) dxdy
+    r_{lm}^N = \int \int K(x,y) \phi_l^N(x)\phi_m^N(y) dxdy
    $$`
 
 - `\(l\)` and `\(m\)` are translation indices of nodes
@@ -797,8 +783,15 @@ layout: false
 - Wavelet components are bounded as
 
   `$$
-    \|A_{l-m}\| + \|B_{l-m}\| + \|C_{l-m}\| \leq 
-    \frac{1}{1 + |l-m|^{k+2}}
+    \|A_{l-m}\| \propto \frac{1}{|l-m|^{2k+2}}
+   $$`
+
+  `$$
+    \|B_{l-m}\| \propto \frac{1}{|l-m|^{k+2}}
+   $$`
+
+  `$$
+    \|C_{l-m}\| \propto \frac{1}{|l-m|^{k+2}}
    $$`
 
 - Terms beyond a certain __bandwidth__ are neglected
