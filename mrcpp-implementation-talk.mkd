@@ -13,82 +13,6 @@ class: center, middle, inverse
 
 
 ---
-template: inverse
-# Multiwavelets
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/scalingbasis.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/refinement.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/unifgrid.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/f0.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/f1.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/f2.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/f3.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/f4.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/adaptivity.jpg" style="width: 100%">
-
----
-
-layout: false
-## Multiwavelets
-
-<img src="images/adapgrid.jpg" style="width: 100%">
-
----
-template: inverse
-# Data structures
----
 
 layout: false
 .left-column[
@@ -118,6 +42,82 @@ layout: false
 [OpenMP]: http://openmp.org/wp/
 ]
 
+---
+template: inverse
+# Multiwavelets
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/scalingbasis.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/refinement.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/unifgrid.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/f0.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/f1.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/f2.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/f3.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/f4.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/adaptivity.jpg" style="width: 70%; float: center">
+
+---
+
+layout: false
+## Multiwavelets
+
+<img src="images/adapgrid.jpg" style="width: 70%; float: center">
+
+---
+template: inverse
+# Data structures
 ---
 
 .left-column[
