@@ -3,7 +3,7 @@ layout: true
 class: center, middle, inverse
 ---
 #MRCPP
-##Data structures and algorithms
+##Implementation
 
 .author[Stig Rune Jensen]
 
@@ -11,6 +11,123 @@ class: center, middle, inverse
 
 .footnote[Slides available on [GitHub](https://github.com/stigrj/mrcpp-implementation-talk)]
 
+
+---
+template: inverse
+# Multiwavelets
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/scalingbasis.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/refinement.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/unifgrid.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/f0.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/f1.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/f2.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/f3.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/f4.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/adaptivity.jpg" style="width: 100%">
+]
+
+---
+
+layout: false
+.left-column[
+## Multiwavelets
+]
+.right-column[
+
+<img src="images/adapgrid.jpg" style="width: 100%">
+]
+
+---
+template: inverse
+# Data structures
 ---
 
 layout: false
@@ -18,22 +135,31 @@ layout: false
 ## Technical stuff
 ]
 .right-column[
-- Hosted on GitHub
+- Hosted on [GitHub]
 
-- Documentation on ReadTheDocs
+- Documentation on [ReadTheDocs]
 
-- Configuration with (Auto)cmake
+- Configuration with [Autocmake]
 
-- Testing with Catch
+- Testing with [Catch]
 
-- Number crunching with BLAS
+- Basic matrix/vector manipulations with [Eigen]
 
-- Parallelization with OpenMP
+- Number crunching with [BLAS]
+
+- Parallelization with [OpenMP]
+
+__derivative convolution__
+
+[GitHub]: https://github.com/MRChemSoft/mrchem
+[ReadTheDocs]: http://mrchemdoc.readthedocs.io/en/latest/
+[Autocmake]: https://github.com/coderefinery/autocmake
+[Catch]: https://github.com/philsquared/Catch
+[Eigen]: http://eigen.tuxfamily.org/index.php?title=Main_Page
+[BLAS]: http://www.netlib.org/blas/
+[OpenMP]: http://openmp.org/wp/
 ]
 
----
-template: inverse
-# Data structures
 ---
 
 .left-column[
@@ -49,7 +175,7 @@ template: inverse
   * Root scale (can be negative)
   * Number of root nodes
   * Type of MW basis (Legendre/Interpolating)
-  * Order of MW basis (`\(1 \leq k \leq 40\)`)
+  * Order of MW basis (`\(1 \leq k \leq 40\)`)<sup>.red[*]</sup>
 
 ```cpp
 template<int D>
@@ -64,6 +190,8 @@ class MWTree {
     std::vector<int> nodesAtDepth;   // Node counter
 }
 ```
+
+.footnote[.red[*]Some operators require 2k intermediates]
 ]
 
 ---
