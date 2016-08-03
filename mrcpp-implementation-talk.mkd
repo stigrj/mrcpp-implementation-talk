@@ -199,7 +199,7 @@ class MWNode {
 - or multi-scale representation
 
   `$$ f(x) \approx f^N(x) = \sum_{j=0}^{k} s_{jl}^0 \phi_{jl}^0(x) +
-  \sum_{n=0}^{N-1}\sum_{l=0}^{2^N-1}\sum_{j=0}^{k} w_{jl}^n \psi_{jl}^n(x) $$`
+  \sum_{n=0}^{N-1}\sum_{l=0}^{2^N-1}\sum_{j=0}^{k} d_{jl}^n \psi_{jl}^n(x) $$`
 
 - We keep a __redundant__ representation of both scaling and wavelet
   coefficients on __all__ scales
@@ -291,8 +291,8 @@ layout: false
   `$$
     sup_y\left|\frac{K(\boldsymbol{x},\boldsymbol{y}) -
     \tilde{K}(\boldsymbol{x},\boldsymbol{y})}
-    {K(\boldsymbol{x},\boldsymbol{y})}\right| \leq
-    \epsilon
+    {K(\boldsymbol{x},\boldsymbol{y})}\right| <
+    \epsilon_s
    $$`
 
 - Decompose into a sum of products of 1D operators
@@ -750,17 +750,9 @@ layout: false
 
 - Wavelet components are bounded as
 
-  `$$
-    \|A_{l-m}\| \propto \frac{1}{|l-m|^{2k+2}}
-   $$`
-
-  `$$
-    \|B_{l-m}\| \propto \frac{1}{|l-m|^{k+2}}
-   $$`
-
-  `$$
-    \|C_{l-m}\| \propto \frac{1}{|l-m|^{k+2}}
-   $$`
+  `$$ \|A_{l-m}\| \propto \frac{1}{|l-m|^{2k+2}} $$`
+  `$$ \|B_{l-m}\| \propto \frac{1}{|l-m|^{k+2}} $$`
+  `$$ \|C_{l-m}\| \propto \frac{1}{|l-m|^{k+2}} $$`
 
 - Terms beyond a certain __bandwidth__ are neglected
 ]
@@ -840,6 +832,7 @@ layout: false
 - MWTrees are built adaptively
 
 ```
+make list of current leaf nodes
 while number of nodes in current list > 0 do
   for each output node in current list do
     compute node
@@ -849,6 +842,7 @@ while number of nodes in current list > 0 do
   end for
   update list with children nodes
 end while
+update coarse scale coefficients by MW transform
 ```
 
 ]
@@ -873,12 +867,12 @@ layout: false
   * based on wavelet norm (in practice `\(d=1\)`)
 
   `$$
-    \|w_l^n\| \geq \epsilon \frac{\|f\|}{2^{-dn/2}}
+    \|w_l^n\| < \epsilon 2^{-dn/2} \|f\|
    $$`
 
 - MW transform
   * wavelet decomposition from leaf to root
-  * update coarser scaling coefficients
+  * update coarser coefficients
 ]
 
 ---
@@ -910,7 +904,7 @@ layout: false
 
 - Perform scaling projection at the `\(n+1\)` quadrature points
 
-- MW transform provides the s/w coefficients at scale `\(n\)`
+- MW transform provides the s/d coefficients at scale `\(n\)`
 
   `$$
     V^{n+1} \rightarrow V^n \oplus W^n
@@ -939,6 +933,9 @@ layout: false
 
   * Add coefficients
 
+- No __absolute__ precision is lost in the addition, but __relative__ accuracy
+  might be lost if the norm is reduced
+
 - No extra information beyond finest level
 
 - Could in principle interpolate from finest refinement level
@@ -964,7 +961,7 @@ layout: false
    $$`
 
 - Perform multiplication node by node
-  * Fecth corresponding nodes of input
+  * Fetch corresponding nodes of input
   * MW transform provides `\(n+1\)` scaling coeffs of inputs 
   * CV transform provides function values of inputs
   * Function values are multiplied pointwise
@@ -1005,6 +1002,12 @@ layout: false
 - 3D bandwidths form cubes and rods (`\(T \times A \times A\)`) 
 
 - Only pure scaling (`\(T \times T \times T\)`) discarded in NS form
+
+- Actual bandwidth computed as
+
+  `$$
+    \|O^n_{l-m}\|_2 < 2^{-(d+n)\epsilon_b
+   $$`
 ]
 
 ---
@@ -1039,6 +1042,48 @@ for each separated component of operator
   end for
 end for
 ```
+]
+
+---
+
+layout: false
+.left-column[
+## Algorithms
+### - Adaptivity
+### - Projection
+### - Addition
+### - Multiplication
+### - Operator application
+]
+.right-column[
+####Precision parameters
+
+- Separated representation threshold
+
+  `$$
+    sup_y\left|\frac{K(x,y) - \tilde{K}(x,y)}
+    {K(x,y)}\right| \leq \epsilon_s
+   $$`
+
+- Operator bandwidth threshold
+
+  `$$
+    \|O^n_{l-m}\|_2 < 2^{-(d+n)\epsilon_b
+   $$`
+
+- Wavelet threshold of the result
+
+  `$$
+    \|w_l^n\| < \epsilon_w 2^{-n/2}\|g\|
+   $$`
+
+- To obtain accuracy `\(\epsilon\)` in the result
+
+  `$$ k \geq -1.5log_{10}(\espilon) + 2 $$`
+  `$$ \epsilon_s = \epsilon/100 $$`
+  `$$ \epsilon_b = \epsilon/100 $$`
+  `$$ \epsilon_w = \epsilon $$`
+
 ]
 
 ---
