@@ -1070,7 +1070,7 @@ layout: false
 
 - To obtain accuracy `\(\epsilon\)` in the result
 
-  `$$ k \geq -1.5log_{10}(\espilon) + 2 $$`
+  `$$ k \geq -1.5log_{10}(\epsilon) + 2 $$`
   `$$ \epsilon_s = \epsilon/100 $$`
   `$$ \epsilon_b = \epsilon/100 $$`
   `$$ \epsilon_w = \epsilon $$`
