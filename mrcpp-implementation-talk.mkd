@@ -814,7 +814,7 @@ layout: false
   * Bound-State Helmholtz kernel
 
   `$$
-    K(x,y) = \frac{e^{-\|x-y\|}{4\pi\|x-y\|}
+    K(x,y) = \frac{e^{-\|x-y\|}}{4\pi\|x-y\|}
    $$`
 
   * Derivative kernel
