@@ -606,7 +606,8 @@ layout: false
 
 #### Vanishing moments
 
-  `$$ \int x^m \psi(x) dx = 0,    m=0,...,M-1 $$`
+  `$$ \int x^m \psi(x) dx = 0 $$`
+  `$$ m=0,...,M-1 $$`
 
 <img src="images/vanishing_moments.jpg" style="width: 100%; float: left">
 
@@ -914,9 +915,7 @@ layout: false
    $$`
 
 - Perform addition node by node
-
   * Fetch corresponding nodes of input
-
   * Add coefficients
 
 - No __absolute__ precision is lost in the addition, but __relative__ accuracy
