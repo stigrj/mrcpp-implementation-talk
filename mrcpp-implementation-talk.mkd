@@ -109,8 +109,6 @@ layout: false
 
 - Parallelization with [OpenMP]
 
-__derivative convolution__
-
 [GitHub]: https://github.com/MRChemSoft/mrchem
 [ReadTheDocs]: http://mrchemdoc.readthedocs.io/en/latest/
 [Autocmake]: https://github.com/coderefinery/autocmake
