@@ -1005,9 +1005,7 @@ layout: false
 
 - Actual bandwidth computed as
 
-  `$$
-    \|O^n_{l-m}\|_2 < 2^{-(d+n)\epsilon_b
-   $$`
+  `$$ \|O^n_{l-m}\|_2 < 2^{-(d+n)}\epsilon_b $$`
 ]
 
 ---
@@ -1060,22 +1058,15 @@ layout: false
 
 - Separated representation threshold
 
-  `$$
-    sup_y\left|\frac{K(x,y) - \tilde{K}(x,y)}
-    {K(x,y)}\right| \leq \epsilon_s
-   $$`
+  `$$ sup_y\left|\frac{K(x,y)-\tilde{K}(x,y)}{K(x,y)}\right| < \epsilon_s $$`
 
 - Operator bandwidth threshold
 
-  `$$
-    \|O^n_{l-m}\|_2 < 2^{-(d+n)\epsilon_b
-   $$`
+  `$$ \|O^n_{l-m}\|_2 < 2^{-(d+n)}\epsilon_b $$`
 
 - Wavelet threshold of the result
 
-  `$$
-    \|w_l^n\| < \epsilon_w 2^{-n/2}\|g\|
-   $$`
+  `$$ \|w_l^n\| < \epsilon_w 2^{-n/2}\|g\| $$`
 
 - To obtain accuracy `\(\epsilon\)` in the result
 
