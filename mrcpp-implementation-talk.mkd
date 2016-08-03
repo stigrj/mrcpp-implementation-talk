@@ -602,15 +602,11 @@ layout: false
 ]
 .right-column[
 #### Convolution operators
-  `$$
-    T^{N} = T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1}
-   $$`
+  `$$ T^{N} = T^{N-1} + C^{N-1} + B^{N-1} + A^{N-1} $$`
 
 #### Vanishing moments
 
-  `$$
-    \int x^m \psi(x) dx = 0,    m=0,...,M-1
-   $$`
+  `$$ \int x^m \psi(x) dx = 0,    m=0,...,M-1 $$`
 
 <img src="images/vanishing_moments.jpg" style="width: 100%; float: left">
 
@@ -750,6 +746,7 @@ layout: false
   `$$ \|A_{l-m}\| \propto \frac{1}{|l-m|^{2k+2}} $$`
   `$$ \|B_{l-m}\| \propto \frac{1}{|l-m|^{k+2}} $$`
   `$$ \|C_{l-m}\| \propto \frac{1}{|l-m|^{k+2}} $$`
+  `$$ \|T_{l-m}\| \propto \frac{1}{|l-m|} $$`
 
 - Terms beyond a certain __bandwidth__ are neglected
 ]
