@@ -262,37 +262,37 @@ node.mwTransform(Compression);      // V^{n} + W^{n}
 
 ---
 
-.left-column[
-## Data structures
-### - MWTree
-### - MWNode
-]
-.right-column[
-#### Multiple dimensions
-
-- Extenstion to `\(d\)` dimensions by tensor product
-
- `$$
-    \Big(V^n\Big)^d = \bigotimes^d V^n
-  $$`
-
-- Wavelet decomposition i 2D
-
- `$$
-    \Big(V^{n+1}\Big)^2 = V^{n+1} \otimes V^{n+1} = 
-    \Big(V^{n} \oplus W^{n}\Big) \otimes
-    \Big(V^{n} \oplus W^{n}\Big)\\
-    = \Big(V^{n} \otimes V^{n}\Big) \oplus
-    \Big(V^{n} \otimes W^{n}\Big) \oplus
-    \Big(W^{n} \otimes V^{n}\Big) \oplus
-    \Big(W^{n} \otimes W^{n}\Big)\\
-    = \Big(V^n\Big)^2\oplus \Big(W^n\Big)^2
-  $$`
-
-- Wavelet space has dimension `\(2^d-1\)`
-]
-
----
+%.left-column[
+%## Data structures
+%### - MWTree
+%### - MWNode
+%]
+%.right-column[
+%#### Multiple dimensions
+%
+%- Extenstion to `\(d\)` dimensions by tensor product
+%
+% `$$
+%    \Big(V^n\Big)^d = \bigotimes^d V^n
+%  $$`
+%
+%- Wavelet decomposition i 2D
+%
+% `$$
+%    \Big(V^{n+1}\Big)^2 = V^{n+1} \otimes V^{n+1} = 
+%    \Big(V^{n} \oplus W^{n}\Big) \otimes
+%    \Big(V^{n} \oplus W^{n}\Big)\\
+%    = \Big(V^{n} \otimes V^{n}\Big) \oplus
+%    \Big(V^{n} \otimes W^{n}\Big) \oplus
+%    \Big(W^{n} \otimes V^{n}\Big) \oplus
+%    \Big(W^{n} \otimes W^{n}\Big)\\
+%    = \Big(V^n\Big)^2\oplus \Big(W^n\Big)^2
+%  $$`
+%
+%- Wavelet space has dimension `\(2^d-1\)`
+%]
+%
+%---
 
 layout: false
 .left-column[
